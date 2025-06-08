@@ -96,7 +96,7 @@ JobLogix is a full-featured web application built using the MERN stack that help
   ├── controllers/
   └── server.js
 ---
-
+---
 ## 👨‍💻 About me
 
 Hi, I’m Ayush Kumbhalkar, a Computer Engineering graduate passionate about creating clean and functional web applications.
