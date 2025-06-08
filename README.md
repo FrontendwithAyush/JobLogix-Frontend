@@ -1,74 +1,99 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# 🚀 JobLogix – Smart Job Application Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Here: 👉 [https://jobapplicationmanager.netlify.app/](https://jobapplicationmanager.netlify.app/)
 
-## Available Scripts
+JobLogix is a full-featured web application built using the MERN stack that helps you **manage and track your job applications** with ease. Add jobs, tag them, track sources, and never miss a deadline.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔐 **Authentication**
+  - Secure Login and Signup using JWT
+- 📝 **Manage Jobs**
+  - Add, Edit, Delete job applications
+- 📌 **Role Tagging**
+  - Labels like `Dream Role`, `Applied`
+- 🌐 **Source & Links**
+  - Store job source like LinkedIn, Indeed + view button
+- 📅 **Timestamp Tracking**
+  - Automatically records application date
+- 📦 **Empty State Handling**
+  - Clean message when no jobs added
+- 🎨 **Modern UI**
+  - Responsive layout, styled with Bootstrap + custom gradients
+- 🎞 **Animated Background**
+  - Uses `.webm` video as smooth background
+- 🌈 **Custom Gradient Cards**
+  - Cards with light gradient background starting from right-bottom
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🌐 Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend:
+- React.js
+- Bootstrap 5
+- React Router DOM
+- Custom CSS with linear gradients
 
-### `npm run build`
+### Backend:
+- Node.js
+- Express.js
+- MongoDB + Mongoose
+- JWT (Auth)
+- Bcrypt (Password Hashing)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🌍 Live Demo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> **Hosted Frontend:** [Netlify](https://jobapplicationmanager.netlify.app/)  
+> **Backend API:** Hosted on Render or local server (based on setup)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🖼️ Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> *(Feel free to update with your screenshots)*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Dashboard with saved jobs  
+- Add Job modal  
+- No Entry state  
+- About Page  
+- Responsive layout on mobile
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠️ Setup Locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🔧 Backend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd backend
+npm install
+npm start
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🌐 Frontend
 
-### Analyzing the Bundle Size
+cd frontend
+npm install
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📁 Folder Structure
+/frontend
+  ├── components/
+  ├── pages/
+  ├── App.js
+  └── index.js
 
-### Making a Progressive Web App
+/backend
+  ├── models/
+  ├── routes/
+  ├── controllers/
+  └── server.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Notes-Frontend
->>>>>>> f5311458d57c1db1b9a1b748107c8ef05003c77b
+👨‍💻 About Me
+Hi, I’m Ayush Kumbhalkar, a Computer Engineering graduate passionate about creating clean and functional web applications.
+This project showcases my frontend and backend integration skills using the MERN stack.
