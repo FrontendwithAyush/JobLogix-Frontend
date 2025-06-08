@@ -20,7 +20,16 @@ const NoteState = (props) => {
     setNotes(json);
   };
   // add a note
-  const addNote = async (title, description, tag) => {
+  const addNote = async (
+    title,
+    description,
+    tag,
+    company,
+    jobLink,
+    location,
+    status,
+    source
+  ) => {
     // TODO: API Call
     // API Call
     const response = await fetch(`${host}/api/notes/addnote`, {
@@ -29,7 +38,16 @@ const NoteState = (props) => {
         "Content-Type": "application/json",
         "auth-token": localStorage.getItem("token"),
       },
-      body: JSON.stringify({ title, description, tag }),
+      body: JSON.stringify({
+        title,
+        description,
+        tag,
+        company,
+        jobLink,
+        location,
+        status,
+        source,
+      }),
     });
     const note = await response.json();
     setNotes(notes.concat(note));
@@ -51,14 +69,33 @@ const NoteState = (props) => {
     setNotes(newNotes);
   };
   //edit a note
-  const editNote = async (id, title, description, tag) => {
+  const editNote = async (
+    id,
+    title,
+    description,
+    tag,
+    company,
+    jobLink,
+    location,
+    status,
+    source
+  ) => {
     const responce = await fetch(`${host}/api/notes/updatenote/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
         "auth-token": localStorage.getItem("token"),
       },
-      body: JSON.stringify({ title, description, tag }),
+      body: JSON.stringify({
+        title,
+        description,
+        tag,
+        company,
+        jobLink,
+        location,
+        status,
+        source,
+      }),
     });
     const json = await responce.json();
 
@@ -69,6 +106,11 @@ const NoteState = (props) => {
         newNotes[index].title = title;
         newNotes[index].description = description;
         newNotes[index].tag = tag;
+        newNotes[index].company = company;
+        newNotes[index].jobLink = jobLink;
+        newNotes[index].location = location;
+        newNotes[index].status = status;
+        newNotes[index].source = source;
         break;
       }
     }

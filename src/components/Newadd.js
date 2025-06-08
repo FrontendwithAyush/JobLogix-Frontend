@@ -1,72 +1,67 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useRef, useContext, useState } from "react";
 import noteContext from "../context/notes/noteContext";
-import Noteitem from "./Noteitem";
-import { useNavigate } from "react-router-dom";
 
-const Notes = (props) => {
-  const context = useContext(noteContext);
-  let history = useNavigate();
-  const { notes, getNotes, editNote } = context;
-  useEffect(() => {
-    if (localStorage.getItem("token")) {
-      getNotes();
-    } else {
-      history("/login");
-    }
-    // eslint-disable-next-line
-  }, []);
+const Newadd = (props) => {
   const ref = useRef(null);
   const refClose = useRef(null);
-  const [note, setNote] = useState({
-    id: "",
-    etitle: "",
-    edescription: "",
-    etag: "",
-    ecompany: "",
-    ejobLink: "",
-    elocation: "",
-    estatus: "",
-    esource: "",
-  });
-  const updateNote = (currentNote) => {
+  const context = useContext(noteContext);
+  const { addNote } = context;
+
+  const AddClick = () => {
     ref.current.click();
-    setNote({
-      id: currentNote._id,
-      etitle: currentNote.title,
-      edescription: currentNote.description,
-      etag: currentNote.tag,
-      ecompany: currentNote.company,
-      ejobLink: currentNote.jobLink,
-      elocation: currentNote.location,
-      estatus: currentNote.status,
-      esource: currentNote.source,
-    });
   };
-  const handleClick = (e) => {
-    editNote(
-      note.id,
-      note.etitle,
-      note.edescription,
-      note.etag,
-      note.ecompany,
-      note.ejobLink,
-      note.elocation,
-      note.estatus,
-      note.esource
-    );
-    refClose.current.click();
-    props.showAlert("Updated Successfully", "success");
-  };
+
+  const [note, setNote] = useState({
+    title: "",
+    description: "",
+    tag: "",
+    company: "",
+    jobLink: "",
+    location: "",
+    status: "",
+    source: "",
+  });
+
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
   };
+  const handleClick = (e) => {
+    refClose.current.click();
+    e.preventDefault();
+    addNote(
+      note.title,
+      note.description,
+      note.tag,
+      note.company,
+      note.jobLink,
+      note.location,
+      note.status,
+      note.source
+    );
+    setNote({
+      title: "",
+      description: "",
+      tag: "",
+      company: "",
+      location: "",
+      jobLink: "",
+      status: "",
+      source: "",
+    });
+    props.showAlert("Added Successfully", "success");
+  };
   return (
     <>
+      <div className="container d-flex justify-content-end">
+        <button type="button" className="btn btn-primary" onClick={AddClick}>
+          New Job Entry
+        </button>
+      </div>
       <button
         type="button"
         className="btn btn-primary d-none"
         data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
+        data-bs-target="#exampleModal1"
         ref={ref}
       >
         Launch demo modal
@@ -74,7 +69,7 @@ const Notes = (props) => {
 
       <div
         className="modal fade"
-        id="exampleModal"
+        id="exampleModal1"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -83,7 +78,7 @@ const Notes = (props) => {
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="exampleModalLabel">
-                Update Application
+                Add New Application
               </h1>
               <button
                 type="button"
@@ -101,11 +96,11 @@ const Notes = (props) => {
                   <input
                     type="text"
                     className="form-control"
-                    id="etag"
-                    name="etag"
+                    id="tag"
+                    name="tag"
                     placeholder="Dream Role"
                     onChange={onChange}
-                    value={note.etag}
+                    value={note.tag}
                   />
                 </div>
                 <div className="mb-2">
@@ -115,13 +110,12 @@ const Notes = (props) => {
                   <input
                     type="text"
                     className="form-control"
-                    id="ecompany"
-                    name="ecompany"
+                    id="company"
+                    name="company"
                     onChange={onChange}
-                    value={note.ecompany}
+                    value={note.company}
                   />
                 </div>
-
                 <div className="mb-2">
                   <label htmlFor="title" className="form-label">
                     Job Title
@@ -129,10 +123,10 @@ const Notes = (props) => {
                   <input
                     type="text"
                     className="form-control"
-                    id="etitle"
-                    name="etitle"
+                    id="title"
+                    name="title"
                     onChange={onChange}
-                    value={note.etitle}
+                    value={note.title}
                   />
                 </div>
                 <div className="mb-2">
@@ -142,11 +136,11 @@ const Notes = (props) => {
                   <input
                     type="text"
                     className="form-control"
-                    id="elocation"
-                    name="elocation"
+                    id="location"
+                    name="location"
                     placeholder="City / Remote / Hybrid"
                     onChange={onChange}
-                    value={note.elocation}
+                    value={note.location}
                   />
                 </div>
                 <div className="mb-2">
@@ -156,11 +150,11 @@ const Notes = (props) => {
                   <input
                     type="text"
                     className="form-control"
-                    id="ejobLink"
+                    id="jobLink"
                     placeholder="URL"
-                    name="ejobLink"
+                    name="jobLink"
                     onChange={onChange}
-                    value={note.ejobLink}
+                    value={note.jobLink}
                   />
                 </div>
 
@@ -169,11 +163,11 @@ const Notes = (props) => {
                     Status
                   </label>
                   <select
-                    id="estatus"
-                    name="estatus"
+                    id="status"
+                    name="status"
                     className="form-select"
                     onChange={onChange}
-                    value={note.estatus}
+                    value={note.status}
                   >
                     <option value="">Select Status</option>
                     <option value="Applied">Applied</option>
@@ -189,11 +183,11 @@ const Notes = (props) => {
                   <input
                     type="text"
                     className="form-control"
-                    id="esource"
-                    name="esource"
+                    id="source"
+                    name="source"
                     placeholder="LinkedIn, referral, etc."
                     onChange={onChange}
-                    value={note.esource}
+                    value={note.source}
                   />
                 </div>
                 <div className="mb-2">
@@ -203,25 +197,12 @@ const Notes = (props) => {
                   <input
                     type="text"
                     className="form-control"
-                    id="edescription"
-                    name="edescription"
+                    id="description"
+                    name="description"
                     onChange={onChange}
-                    value={note.edescription}
+                    value={note.description}
                   />
                 </div>
-                {/* <div className="mb-2">
-                  <label htmlFor="tag" className="form-label">
-                    Tag
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="etag"
-                    name="etag"
-                    onChange={onChange}
-                    value={note.etag}
-                  />
-                </div> */}
               </form>
             </div>
             <div className="modal-footer">
@@ -231,42 +212,22 @@ const Notes = (props) => {
                 data-bs-dismiss="modal"
                 ref={refClose}
               >
-                Close
+                Cancel
               </button>
               <button
                 type="button"
                 className="btn btn-primary"
                 onClick={handleClick}
-                disabled={
-                  note.etitle.length < 5 || note.edescription.length < 6
-                }
+                disabled={note.title.length < 5 || note.description.length < 6}
               >
-                Update Job
+                Save Job
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="row my-3 " id="adjust">
-        <h2 className="my-4" style={{ fontFamily: "Georgia" }}>
-          Application Tracker
-        </h2>
-        <div className="container">
-          {notes.length === 0 && "No job entries found. Start tracking now!"}
-        </div>
-        {notes.map((note) => {
-          return (
-            <Noteitem
-              note={note}
-              updateNote={updateNote}
-              key={note._id}
-              showAlert={props.showAlert}
-            />
-          );
-        })}
-      </div>
     </>
   );
 };
 
-export default Notes;
+export default Newadd;

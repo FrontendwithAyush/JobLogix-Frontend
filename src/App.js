@@ -22,6 +22,25 @@ function App() {
   };
   return (
     <>
+      {/* Fullscreen Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{
+          position: "fixed",
+          bottom: 0,
+          right: 0,
+          width: "20%",
+          height: "auto",
+          objectFit: "cover",
+          zIndex: -1,
+        }}
+      >
+        <source src="/bg-video.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
       <NoteState>
         <Router>
           <Navbar />

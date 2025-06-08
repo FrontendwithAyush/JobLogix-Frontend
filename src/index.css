@@ -14,3 +14,16 @@ code {
 i {
   cursor: pointer;
 }
+#adjust {
+  margin-left: 5rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  #adjust {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #adjust {
+    margin-left: 0rem;
+  }
+}
