@@ -28,6 +28,7 @@ const Newadd = (props) => {
   const handleClick = (e) => {
     refClose.current.click();
     e.preventDefault();
+
     addNote(
       note.title,
       note.description,
@@ -88,7 +89,7 @@ const Newadd = (props) => {
               ></button>
             </div>
             <div className="modal-body">
-              <form className="my-2">
+              <form className="my-2" id="jobForm" onSubmit={handleClick}>
                 <div className="mb-2">
                   <label htmlFor="tag" className="form-label">
                     Title / Tag
@@ -127,6 +128,8 @@ const Newadd = (props) => {
                     name="title"
                     onChange={onChange}
                     value={note.title}
+                    minLength={5}
+                    required
                   />
                 </div>
                 <div className="mb-2">
@@ -168,6 +171,7 @@ const Newadd = (props) => {
                     className="form-select"
                     onChange={onChange}
                     value={note.status}
+                    required
                   >
                     <option value="">Select Status</option>
                     <option value="Applied">Applied</option>
@@ -201,6 +205,8 @@ const Newadd = (props) => {
                     name="description"
                     onChange={onChange}
                     value={note.description}
+                    required
+                    minLength={6}
                   />
                 </div>
               </form>
@@ -215,10 +221,11 @@ const Newadd = (props) => {
                 Cancel
               </button>
               <button
-                type="button"
+                type="submit"
                 className="btn btn-primary"
-                onClick={handleClick}
-                disabled={note.title.length < 5 || note.description.length < 6}
+                form="jobForm"
+                // onClick={handleClick}
+                // disabled={note.title.length < 5 || note.description.length < 6}
               >
                 Save Job
               </button>

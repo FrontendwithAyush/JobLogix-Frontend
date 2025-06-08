@@ -42,7 +42,8 @@ const Notes = (props) => {
       esource: currentNote.source,
     });
   };
-  const handleClick = (e) => {
+  const handleClick1 = (e) => {
+    e.preventDefault();
     editNote(
       note.id,
       note.etitle,
@@ -93,7 +94,7 @@ const Notes = (props) => {
               ></button>
             </div>
             <div className="modal-body">
-              <form className="my-2">
+              <form className="my-2" id="jobForm1" onSubmit={handleClick1}>
                 <div className="mb-2">
                   <label htmlFor="tag" className="form-label">
                     Title / Tag
@@ -133,6 +134,8 @@ const Notes = (props) => {
                     name="etitle"
                     onChange={onChange}
                     value={note.etitle}
+                    required
+                    minLength={5}
                   />
                 </div>
                 <div className="mb-2">
@@ -174,6 +177,7 @@ const Notes = (props) => {
                     className="form-select"
                     onChange={onChange}
                     value={note.estatus}
+                    required
                   >
                     <option value="">Select Status</option>
                     <option value="Applied">Applied</option>
@@ -207,6 +211,8 @@ const Notes = (props) => {
                     name="edescription"
                     onChange={onChange}
                     value={note.edescription}
+                    required
+                    minLength={6}
                   />
                 </div>
                 {/* <div className="mb-2">
@@ -234,12 +240,13 @@ const Notes = (props) => {
                 Close
               </button>
               <button
-                type="button"
+                type="submit"
                 className="btn btn-primary"
-                onClick={handleClick}
-                disabled={
-                  note.etitle.length < 5 || note.edescription.length < 6
-                }
+                form="jobForm1"
+                // onClick={handleClick}
+                // disabled={
+                //   note.etitle.length < 5 || note.edescription.length < 6
+                // }
               >
                 Update Job
               </button>
