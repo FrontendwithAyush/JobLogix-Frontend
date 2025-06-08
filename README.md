@@ -1,4 +1,12 @@
 # 🚀 JobLogix – Smart Job Application Manager
+![React](https://img.shields.io/badge/Frontend-React.js-61DAFB?style=for-the-badge&logo=react)
+![Bootstrap](https://img.shields.io/badge/UI-Bootstrap-7952B3?style=for-the-badge&logo=bootstrap)
+![Node.js](https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=node.js)
+![Express](https://img.shields.io/badge/API-Express.js-000000?style=for-the-badge&logo=express)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange?style=for-the-badge&logo=jsonwebtokens)
+![Netlify](https://img.shields.io/badge/Hosted%20on-Netlify-00C7B7?style=for-the-badge&logo=netlify)
+
 
 Live Here: 👉 [https://jobapplicationmanager.netlify.app/](https://jobapplicationmanager.netlify.app/)
 
