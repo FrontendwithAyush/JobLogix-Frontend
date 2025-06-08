@@ -82,7 +82,7 @@ npm install
 npm start
 
 ---
-
+---
 📁 Folder Structure
 /frontend
   ├── components/
@@ -96,7 +96,7 @@ npm start
   ├── controllers/
   └── server.js
 ---
-
+---
 👨‍💻 About Me
 Hi, I’m Ayush Kumbhalkar, a Computer Engineering graduate passionate about creating clean and functional web applications.
 This project showcases my frontend and backend integration skills using the MERN stack.
