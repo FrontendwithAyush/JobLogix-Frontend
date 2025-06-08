@@ -49,7 +49,7 @@ JobLogix is a full-featured web application built using the MERN stack that help
 ## 🌍 Live Demo
 
 > **Hosted Frontend:** [Netlify](https://jobapplicationmanager.netlify.app/)  
-> **Backend API:** Hosted on Render or local server (based on setup)
+> **Backend API:** Hosted on Render 
 
 ---
 
@@ -81,6 +81,8 @@ cd frontend
 npm install
 npm start
 
+---
+
 📁 Folder Structure
 /frontend
   ├── components/
@@ -93,6 +95,7 @@ npm start
   ├── routes/
   ├── controllers/
   └── server.js
+---
 
 👨‍💻 About Me
 Hi, I’m Ayush Kumbhalkar, a Computer Engineering graduate passionate about creating clean and functional web applications.
