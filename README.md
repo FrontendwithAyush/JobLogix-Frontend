@@ -78,7 +78,7 @@ JobLogix is a full-featured web application built using the MERN stack that help
 🌐 Frontend
 
 - cd frontend
--npm install
+- npm install
 - npm start
 
 
