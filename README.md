@@ -18,7 +18,7 @@ JobLogix is a full-featured web application built using the MERN stack that help
 
 ## 📸 Preview
 
-![App Preview](./screenshot/movie-preview.png) <!-- Add your screenshot image in a folder called 'screenshots' -->
+![App Preview](./screenshot/JobLogix-preview.png) <!-- Add your screenshot image in a folder called 'screenshots' -->
 
 ---
 
@@ -71,21 +71,10 @@ JobLogix is a full-featured web application built using the MERN stack that help
 
 ## 🖼️ Screenshots
 
-> *(Feel free to update with your screenshots)*
-
-- Dashboard with saved jobs  
-- Add Job modal  
-- No Entry state  
-- About Page  
-- Responsive layout on mobile
   <div align="center">
 <img src="./screenshot/img1.png" width="200" />
 <img src="./screenshot/img2.png" width="200" />
 <img src="./screenshot/img3.png" width="200" />
-<br/>
-<img src="./screenshot/img4.png" width="200" />
-<img src="./screenshot/img5.png" width="200" />
-<img src="./screenshot/img6.png" width="200" />
 </div>
 
 ---
