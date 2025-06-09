@@ -78,6 +78,15 @@ JobLogix is a full-featured web application built using the MERN stack that help
 - No Entry state  
 - About Page  
 - Responsive layout on mobile
+  <div align="center">
+<img src="./screenshot/img1.png" width="200" />
+<img src="./screenshot/img2.png" width="200" />
+<img src="./screenshot/img3.png" width="200" />
+<br/>
+<img src="./screenshot/img4.png" width="200" />
+<img src="./screenshot/img5.png" width="200" />
+<img src="./screenshot/img6.png" width="200" />
+</div>
 
 ---
 
