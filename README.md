@@ -10,6 +10,8 @@
 
 Live Here: 👉 [https://jobapplicationmanager.netlify.app/](https://jobapplicationmanager.netlify.app/)
 
+backend Here: 👉 [https://github.com/FrontendwithAyush/JobLogix-Backend](https://github.com/FrontendwithAyush/JobLogix-Backend)
+
 JobLogix is a full-featured web application built using the MERN stack that helps you **manage and track your job applications** with ease. Add jobs, tag them, track sources, and never miss a deadline.
 
 ---
