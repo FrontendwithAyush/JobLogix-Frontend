@@ -16,6 +16,12 @@ JobLogix is a full-featured web application built using the MERN stack that help
 
 ---
 
+## 📸 Preview
+
+![App Preview](./screenshot/movie-preview.png) <!-- Add your screenshot image in a folder called 'screenshots' -->
+
+---
+
 ## ✨ Features
 
 - 🔐 **Authentication**
