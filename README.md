@@ -96,15 +96,16 @@ JobLogix is a full-featured web application built using the MERN stack that help
 📁 Folder Structure
 /frontend
   ├── components/
-  ├── pages/
+  ├── context/
   ├── App.js
   └── index.js
 
 /backend
   ├── models/
   ├── routes/
-  ├── controllers/
-  └── server.js
+  ├── middleware/
+  ├── db.js
+  └── index.js
   
 
 ---
